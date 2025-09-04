@@ -16,15 +16,31 @@ const displayWordCard = (words) => {
   wordCardContainer.innerHTML = "";
 
   if (words.length == 0) {
+    wordCardContainer.innerHTML = `
+      <div class="text-center col-span-full bangla-font space-y-6">
+      <img class = "mx-auto" src = "./images/alert-error.png"/>
+        <p class="text-xl font-semibold text-gray-400">
+          এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+        </p>
+        <h2 class="text-4xl font-bold">নেক্সট Lesson এ যান</h2>
+      </div>
+    
+    `;
     return;
   }
   words.forEach((element) => {
     const cardDiv = document.createElement("div");
     cardDiv.innerHTML = `
       <div class="bg-white text-center p-10 m-5 rounded-lg shadow-sm h-100%">
-        <h2 class="text-[32px] font-bold"> ${element.word} </h2>
+         <h2 class="text-[32px] font-bold"> ${
+           element.word ? element.word : "অর্থ পাওয়া যাই নি"
+         } </h2>
         <p class="text-gray-400 my-3">Meaning /Pronounciation</p>
-        <h2 class="text-[32px] font-semibold bangla-font">${element.meaning} /${element.pronunciation} </h2>
+        <h2 class="text-[32px] font-semibold bangla-font">${
+          element.meaning ? element.meaning : "অর্থ পাওয়া যাই নি"
+        } ${
+      element.pronunciation ? element.pronunciation : "pronunciation নাই"
+    } </h2>
         <div class="flex justify-between items-center mt-10">
           <button class="btn bg-[#1A91FF10]">
             <i class="fa-solid fa-circle-info"></i>
