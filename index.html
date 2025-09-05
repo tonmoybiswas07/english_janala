@@ -178,7 +178,7 @@
     <!-- card section starts here -->
     <section
       id="word-card-container"
-      class="bg-gray-200 py-10 mb-15 w-11/12 mx-auto grid grid-cols-3"
+      class="bg-gray-200 py-10 mb-15 w-11/12 mx-auto grid grid-cols-3 rounded-xl"
     >
       <div class="text-center col-span-full bangla-font space-y-6">
         <p class="text-xl font-semibold text-gray-400">
@@ -212,9 +212,11 @@
         </h1>
       </div>
       <!-- Accordion section starts here -->
-      <div class="w-11/12 mx-auto mb-15">
+      <div class="w-11/12 mx-auto mb-15 flex flex-col gap-2">
         <!-- first card -->
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 bg-gray-100"
+        >
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div class="collapse-title font-semibold">
             1. How can I start learning English on this website?
@@ -226,7 +228,9 @@
           </div>
         </div>
         <!-- second card -->
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 bg-gray-100"
+        >
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
             2. Is this website free to use?
@@ -237,7 +241,9 @@
           </div>
         </div>
         <!-- third card -->
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 bg-gray-100"
+        >
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
             3. Do I need to create an account?
@@ -248,7 +254,9 @@
           </div>
         </div>
         <!-- fourth card -->
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 bg-gray-100"
+        >
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
             4. How can I build my English vocabulary?
@@ -259,7 +267,9 @@
           </div>
         </div>
         <!-- fifth card -->
-        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 bg-gray-100"
+        >
           <input type="radio" name="my-accordion-3" />
           <div class="collapse-title font-semibold">
             5. Do you offer certificates for completed courses?
@@ -271,6 +281,37 @@
         </div>
       </div>
     </section>
+    <!-- Accordion section end here -->
+    <!-- footer section starts here -->
+    <footer
+      class="bg-[#1A91FF10] min-h-[100px] flex justify-between items-center p-10"
+    >
+      <div class="footer-left-section py-5 pl-5">
+        <div>
+          <a class="flex justify-left items-center md:gap-2">
+            <span class="text-2xl font-semibold">English</span>
+            <img src="./images/logo.png" alt="logo" />
+            <span class="text-2xl font-semibold">জানালা</span>
+          </a>
+        </div>
+        <div>
+          <h1 class="text-[18px] text-gray-400 py-2">ইংরেজি শিখুন সহজে</h1>
+          <p>Providing ED-Tech Applications since 2025</p>
+        </div>
+      </div>
+      <div class="footer-right-section flex flex-col gap-4 mr-5">
+        <div>
+          <p class="text-[20px]">Follow us</p>
+        </div>
+        <div class="flex justify-between items-center gap-5">
+          <a href=""><img src="./images/fb-thumb.png" alt="" /></a>
+          <a href=""> <img src="./images/youtube-thumb.png" alt="" /></a>
+          <a href=""> <img src="./images/instagram-thumb.png" alt="" /></a>
+          <a href=""><img src="./images/github-thumb.png" alt="" /></a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end here -->
 
     <script src="script/index.js"></script>
   </body>
