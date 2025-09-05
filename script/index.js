@@ -10,7 +10,19 @@ const loadLevel = () => {
     .then((data) => displayLesson(data.data));
 };
 
+// loading container
+const loadingCircle = (status) => {
+  if (status == true) {
+    document.getElementById("loading-container").classList.remove("hidden");
+    document.getElementById("word-card-container").classList.add("hidden");
+  } else {
+    document.getElementById("word-card-container").classList.remove("hidden");
+    document.getElementById("loading-container").classList.add("hidden");
+  }
+};
+
 const loadLevelWord = (id) => {
+  loadingCircle(true);
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -77,6 +89,7 @@ const displayWordCard = (words) => {
       </div>
     
     `;
+    loadingCircle(false);
     return;
   }
   words.forEach((element) => {
@@ -106,6 +119,7 @@ const displayWordCard = (words) => {
     `;
     wordCardContainer.append(cardDiv);
   });
+  loadingCircle(false);
 };
 const displayLesson = (lessons) => {
   const levelContainer = document.getElementById("level-container");
