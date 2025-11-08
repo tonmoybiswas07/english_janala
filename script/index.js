@@ -102,7 +102,7 @@ const displayWordCard = (words) => {
   words.forEach((element) => {
     const cardDiv = document.createElement("div");
     cardDiv.innerHTML = `
-      <div class="bg-white text-center p-10 m-5 rounded-lg shadow-sm h-100%">
+      <div class="bg-white text-center w-[350px] h-[350px] p-10 m-5 rounded-lg shadow-sm h-100%">
          <h2 class="text-[32px] font-bold"> ${
            element.word ? element.word : "অর্থ পাওয়া যাই নি"
          } </h2>
